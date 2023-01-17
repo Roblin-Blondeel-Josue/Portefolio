@@ -8,11 +8,14 @@ import {
   Button,
   Modal,
 } from "@mui/material";
-import animation1 from "../assets/animation1.gif";
-import iconbook1 from "../assets/iconbook1.png";
-import iconbook2 from "../assets/iconbook2.png";
-import skull from "../assets/skull.svg";
+import animation1 from "../../assets/animation1.gif";
+import iconbook1 from "../../assets/iconbook1.png";
+import iconbook2 from "../../assets/iconbook2.png";
+import skull from "../../assets/skull.svg";
+import bookpile from "../../assets/book-pile.png";
 import PartyPlace from "./PartyPlace";
+import Apnea from "./Apneas";
+import KlassBox from "./KlassBox";
 
 const style = {
   position: "absolute",
@@ -29,6 +32,9 @@ export default function Mywork() {
   const [openModal2, setOpenModal2] = React.useState(false);
   const handleOpenModal2 = () => setOpenModal2(true);
   const handleCloseModal2 = () => setOpenModal2(false);
+  const [openModal3, setOpenModal3] = React.useState(false);
+  const handleOpenModal3 = () => setOpenModal3(true);
+  const handleCloseModal3 = () => setOpenModal3(false);
 
   return (
     <Card sx={{ height: "90vh", boxShadow: 3 }}>
@@ -51,10 +57,11 @@ export default function Mywork() {
           marginRight: "1rem",
         }}
       >
-        <div>
+        <div style={{ width: "30vw" }}>
           <Typography variant="h6">
-            This is my projects library. Anytime I create a new projet, I will
-            put it on the shelf.
+            This is my projects library. Anytime I create a website projet, I
+            will put it on the shelf. Others littles creations will be place on
+            my GitHub
             <br />
             <br /> Choose a book to read it.
           </Typography>
@@ -68,7 +75,7 @@ export default function Mywork() {
           sx={{
             m: "0 1rem",
             height: "65vh",
-            width: "70vw",
+            width: "40vw",
             border: "1rem ridge rgba(82, 59, 39, .6)",
           }}
         >
@@ -114,12 +121,13 @@ export default function Mywork() {
               marginTop: "1rem",
               borderBottom: "5px solid #523b27",
               display: "flex",
+              justifyContent: "flex-end",
             }}
           >
             <Button sx={{ p: 0 }} onClick={() => handleOpenModal2()}>
               <img
                 style={{
-                  marginLeft: "1rem",
+                  marginRight: "1rem",
                   padding: 0,
                   height: "4rem",
                 }}
@@ -133,7 +141,40 @@ export default function Mywork() {
               aria-labelledby="modal-modal-title2"
               aria-describedby="modal-modal-description2"
             >
-              <Box sx={style}>bob</Box>
+              <Box sx={style}>
+                <Apnea />
+              </Box>
+            </Modal>
+          </div>
+          <div
+            className="etagere3"
+            style={{
+              marginTop: "1rem",
+              borderBottom: "5px solid #523b27",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Button sx={{ p: 0 }} onClick={() => handleOpenModal3()}>
+              <img
+                style={{
+                  marginRight: "1rem",
+                  padding: 0,
+                  height: "4rem",
+                }}
+                alt="Book icon"
+                src={bookpile}
+              />
+            </Button>
+            <Modal
+              open={openModal3}
+              onClose={handleCloseModal3}
+              aria-labelledby="modal-modal-title2"
+              aria-describedby="modal-modal-description2"
+            >
+              <Box sx={style}>
+                <KlassBox />
+              </Box>
             </Modal>
           </div>
         </Box>

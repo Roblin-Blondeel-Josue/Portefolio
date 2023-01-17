@@ -6,11 +6,13 @@ import {
   CardMedia,
   CardHeader,
 } from "@mui/material";
-import picture1 from "../assets/picture1.png";
+import picture1 from "../../assets/picture1.png";
 
 export default function AboutMe() {
   return (
-    <Card sx={{ height: "90vh", boxShadow: 3, marginTop: "2rem" }}>
+    <Card
+      sx={{ height: "90vh", boxShadow: 3, marginTop: "2rem", width: "75vw" }}
+    >
       <CardHeader
         id="about-me"
         title={
@@ -29,7 +31,7 @@ export default function AboutMe() {
           alt="Labs"
           sx={{ marginBottom: "1rem", height: "70vh" }}
         />
-        <Typography variant="body1" sx={{ marginLeft: "1rem" }}>
+        <Typography variant="body1" sx={{ margin: "1rem 2rem" }}>
           Hello, my name is Josué, from Strasbourg. I'm a young develeppor web.
           I began to learn web developping starting on September 2022. I love to
           work with ReactJs and NodeJs to create new websites. Recently, I began

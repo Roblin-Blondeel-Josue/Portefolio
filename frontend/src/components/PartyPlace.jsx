@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Card, CardContent, Box, Button } from "@mui/material";
-import partyplace from "../assets/partyplace.png";
+import partyplace from "../../assets/partyplace.png";
 
 export default function PartyPlace() {
   return (
@@ -76,8 +76,14 @@ export default function PartyPlace() {
             API
           </Typography>
           <Button
+            onClick={() =>
+              window.open(
+                "https://sxb-2022-party-place.vercel.app/",
+                "_blank",
+                "noreferrer"
+              )
+            }
             sx={{ textDecoration: "none", m: "2rem 0", color: "primary.main" }}
-            href="https://sxb-2022-party-place.vercel.app/"
           >
             Try it there
           </Button>

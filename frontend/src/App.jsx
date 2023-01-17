@@ -31,7 +31,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Stack sx={{ m: "10vw 5vw" }} direction="column" spacing={5}>
+      <Stack
+        sx={{ m: "10vw 5vw", alignItems: "center" }}
+        direction="column"
+        spacing={5}
+      >
         <AboutMe />
         <Mywork />
         <Contact />
