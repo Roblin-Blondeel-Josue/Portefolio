@@ -18,10 +18,7 @@ export default function Contact() {
       <CardHeader
         id="contact"
         title={
-          <Typography
-            sx={{ borderBottom: "2px solid #504538", width: "13ch" }}
-            variant="h3"
-          >
+          <Typography sx={{ width: "13ch" }} variant="h3">
             How Find Me
           </Typography>
         }

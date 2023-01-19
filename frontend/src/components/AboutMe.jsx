@@ -16,10 +16,7 @@ export default function AboutMe() {
       <CardHeader
         id="about-me"
         title={
-          <Typography
-            sx={{ borderBottom: "2px solid #504538", width: "10ch" }}
-            variant="h3"
-          >
+          <Typography sx={{ width: "10ch" }} variant="h3">
             Who I Am
           </Typography>
         }

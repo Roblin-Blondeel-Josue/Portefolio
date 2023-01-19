@@ -9,10 +9,6 @@ import {
   Modal,
 } from "@mui/material";
 import animation1 from "../../assets/animation1.gif";
-import iconbook1 from "../../assets/iconbook1.png";
-import iconbook2 from "../../assets/iconbook2.png";
-import skull from "../../assets/skull.svg";
-import bookpile from "../../assets/book-pile.png";
 import PartyPlace from "./PartyPlace";
 import Apnea from "./Apneas";
 import KlassBox from "./KlassBox";
@@ -41,10 +37,7 @@ export default function Mywork() {
       <CardHeader
         id="my-work"
         title={
-          <Typography
-            variant="h3"
-            sx={{ borderBottom: "2px solid #504538", width: "12ch" }}
-          >
+          <Typography variant="h3" sx={{ width: "12ch" }}>
             What I Did
           </Typography>
         }
@@ -73,6 +66,7 @@ export default function Mywork() {
         </div>
         <Box
           sx={{
+            paddingTop: ".5rem",
             m: "0 1rem",
             height: "65vh",
             width: "40vw",
@@ -84,15 +78,31 @@ export default function Mywork() {
             style={{ borderBottom: "5px solid #523b27", display: "flex" }}
           >
             <Button sx={{ p: 0 }} onClick={() => handleOpen()}>
-              <img
-                style={{
-                  marginLeft: "1rem",
-                  padding: 0,
-                  height: "4rem",
+              <Card
+                sx={{
+                  p: 0,
+                  bgcolor: "primary.main",
+                  borderRadius: "3px",
+                  height: "7rem",
+                  width: "2rem",
+                  paddingBottom: ".5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                alt="Book icon"
-                src={iconbook1}
-              />
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "black",
+                    p: 0,
+                    writingMode: "vertical-rl",
+                    textOrientation: "mixed",
+                  }}
+                >
+                  P-PLACE
+                </Typography>
+              </Card>
             </Button>
             <Modal
               open={open}
@@ -104,16 +114,6 @@ export default function Mywork() {
                 <PartyPlace />
               </Box>
             </Modal>
-            <img
-              style={{
-                marginLeft: "5rem",
-                padding: 0,
-                height: "4rem",
-                transform: "rotate(10deg)",
-              }}
-              alt="Skull icon"
-              src={skull}
-            />
           </div>
           <div
             className="etagere2"
@@ -125,15 +125,31 @@ export default function Mywork() {
             }}
           >
             <Button sx={{ p: 0 }} onClick={() => handleOpenModal2()}>
-              <img
-                style={{
-                  marginRight: "1rem",
-                  padding: 0,
-                  height: "4rem",
+              <Card
+                sx={{
+                  p: 0,
+                  bgcolor: "#7ACCBF",
+                  borderRadius: "3px",
+                  height: "7rem",
+                  width: "2rem",
+                  paddingBottom: ".5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                alt="Book icon"
-                src={iconbook2}
-              />
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "black",
+                    p: 0,
+                    writingMode: "vertical-rl",
+                    textOrientation: "mixed",
+                  }}
+                >
+                  APNEA
+                </Typography>
+              </Card>
             </Button>
             <Modal
               open={openModal2}
@@ -156,15 +172,32 @@ export default function Mywork() {
             }}
           >
             <Button sx={{ p: 0 }} onClick={() => handleOpenModal3()}>
-              <img
-                style={{
-                  marginRight: "1rem",
-                  padding: 0,
-                  height: "4rem",
+              <Card
+                sx={{
+                  marginLeft: ".5rem",
+                  p: 0,
+                  bgcolor: "#91091E",
+                  borderRadius: "3px",
+                  height: "7rem",
+                  width: "2rem",
+                  paddingBottom: ".5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                alt="Book icon"
-                src={bookpile}
-              />
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "white",
+                    p: 0,
+                    writingMode: "vertical-rl",
+                    textOrientation: "mixed",
+                  }}
+                >
+                  KLASSBOX
+                </Typography>
+              </Card>
             </Button>
             <Modal
               open={openModal3}
