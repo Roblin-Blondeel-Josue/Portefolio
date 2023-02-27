@@ -1,18 +1,18 @@
 import React from "react";
 import { Typography, Card, CardContent, Box, Button } from "@mui/material";
-import underconstruction from "../../assets/underconstruction.png";
+import picture from "../../assets/characterPocket.png";
 
-export default function KlassBox() {
+export default function CharacPocket() {
   return (
     <Card
       elevation={4}
       sx={{
-        height: "70vh",
+        height: "80vh",
         width: "60vw",
         borderRadius: "5px",
         boxShadow: 3,
         marginTop: "2rem",
-        bgcolor: "#91091E",
+        bgcolor: "#181D31",
       }}
     >
       <CardContent
@@ -25,7 +25,7 @@ export default function KlassBox() {
         <Box
           sx={{
             padding: "0 1rem",
-            height: "65vh",
+            height: "75vh",
             width: "35vw",
             bgcolor: "#FFF5FF",
             borderTop: "1px solid #292724",
@@ -37,13 +37,13 @@ export default function KlassBox() {
             boxShadow: "-8px 4px 9px 5px rgba(0,0,0,0.4)",
           }}
         >
-          <img src={underconstruction} alt="Klassbox Welcome page" />
+          <img src={picture} alt="Chara'Pocket Welcome page" />
         </Box>
 
         <Box
           sx={{
             padding: "1rem",
-            height: "65vh",
+            height: "75vh",
             width: "35vw",
             bgcolor: "#FFF5FF",
             borderTop: "1px solid #292724",
@@ -61,31 +61,32 @@ export default function KlassBox() {
             }}
             variant="h4"
           >
-            KlassBox
+            Chara'Pocket
           </Typography>
-          <Typography variant="body2" sx={{ fontSize: ".75rem" }}>
-            KlassBox is my first fullstack website. The client was a caterer who
-            prepared meals for company. Before the website, he used to take his
-            orders with whatsapp and received moneys in cash. Now, he has a
-            database of his client, historics orders and online payement.
+          <Typography variant="body2" sx={{ fontSize: ".8rem" }}>
+            Chara'Pocket is a fullstack website. This app was build for helping
+            LARP organisator to manage their players and help player to manage
+            the character sheet. This is my first solo side-projet.
             <br />
-            Klassbox was a Next app, with Material UI as framework for
+            <br />
+            Chara'Pocket was a Next app, with Material UI as framework for
             compenents. For the API, we create an API rest with NodeJs and
-            Sequelize.
+            MangoDB.
             <br />
-            Klassbox was under construction. Visit the GitHub
+            <br />
+            Chara'Pocket was under construction
           </Typography>
           <Button
             onClick={() =>
               window.open(
-                "https://github.com/WildCodeSchool/092022-project3-box-front",
+                "https://github.com/Roblin-Blondeel-Josue/character-in-pocket",
                 "_blank",
                 "noreferrer"
               )
             }
             sx={{
               textDecoration: "none",
-              m: "1rem .5rem",
+              m: "2rem .5rem",
               color: "primary.main",
             }}
             href=""
@@ -95,18 +96,34 @@ export default function KlassBox() {
           <Button
             sx={{
               textDecoration: "none",
-              m: "1rem .5rem",
+              m: "2rem .5rem",
               color: "primary.main",
             }}
             onClick={() =>
               window.open(
-                "https://github.com/WildCodeSchool/092022-project3-box-api",
+                "https://github.com/Roblin-Blondeel-Josue/garou-api",
                 "_blank",
                 "noreferrer"
               )
             }
           >
             Back there
+          </Button>
+          <Button
+            sx={{
+              textDecoration: "none",
+              m: "2rem .5rem",
+              color: "primary.main",
+            }}
+            onClick={() =>
+              window.open(
+                "https://character-in-pocket.vercel.app/",
+                "_blank",
+                "noreferrer"
+              )
+            }
+          >
+            Website
           </Button>
         </Box>
       </CardContent>

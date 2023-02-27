@@ -7,7 +7,7 @@ export default function PartyPlace() {
     <Card
       elevation={4}
       sx={{
-        height: "70vh",
+        height: "80vh",
         width: "60vw",
         borderRadius: "5px",
         boxShadow: 3,
@@ -25,7 +25,7 @@ export default function PartyPlace() {
         <Box
           sx={{
             padding: "0 1rem",
-            height: "65vh",
+            height: "75vh",
             width: "35vw",
             bgcolor: "#FFF5FF",
             borderTop: "1px solid #292724",
@@ -42,8 +42,8 @@ export default function PartyPlace() {
 
         <Box
           sx={{
-            padding: "2rem",
-            height: "65vh",
+            padding: "1rem",
+            height: "75vh",
             width: "35vw",
             bgcolor: "#FFF5FF",
             borderTop: "1px solid #292724",
@@ -57,13 +57,13 @@ export default function PartyPlace() {
             sx={{
               borderBottom: "2px solid #504538",
               width: "10ch",
-              marginBottom: "1rem",
+              marginBottom: ".5rem",
             }}
             variant="h4"
           >
             Party Place
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" sx={{ fontSize: ".8rem" }}>
             Party place is a website that we created during one month with my
             classcowork. The path choses by the Professor was : "Create a React
             Website who make API call. You're free for the method". My group and
@@ -83,7 +83,7 @@ export default function PartyPlace() {
                 "noreferrer"
               )
             }
-            sx={{ textDecoration: "none", m: "2rem 0", color: "primary.main" }}
+            sx={{ textDecoration: "none", m: "1rem 0", color: "primary.main" }}
           >
             Try it there
           </Button>

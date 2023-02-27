@@ -7,7 +7,7 @@ export default function Apnea() {
     <Card
       elevation={4}
       sx={{
-        height: "70vh",
+        height: "80vh",
         width: "60vw",
         borderRadius: "5px",
         boxShadow: 3,
@@ -25,7 +25,7 @@ export default function Apnea() {
         <Box
           sx={{
             padding: "0 1rem",
-            height: "65vh",
+            height: "75vh",
             width: "35vw",
             bgcolor: "#FFF5FF",
             borderTop: "1px solid #292724",
@@ -42,8 +42,8 @@ export default function Apnea() {
 
         <Box
           sx={{
-            padding: "2rem",
-            height: "65vh",
+            padding: "1rem",
+            height: "75vh",
             width: "35vw",
             bgcolor: "#FFF5FF",
             borderTop: "1px solid #292724",
@@ -57,19 +57,18 @@ export default function Apnea() {
             sx={{
               borderBottom: "2px solid #504538",
               width: "10ch",
-              marginBottom: "1rem",
+              marginBottom: ".5rem",
             }}
             variant="h4"
           >
             Party Place
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" sx={{ fontSize: ".8rem" }}>
             Apnea is a website that we created during an one day hackathon on
             Wild Code School. The rule of this hackathon was "Think a new way
             for journey". We choose to create a website that give you pollution
             of an city (between the most polluted city arround the world) and
             the impact of your flight for going in this place
-            <br />
             <br />
             Apnea was a react app, with Material UI as framework for compenents.
             For the API, we choose some API for find the air informations,
@@ -80,7 +79,7 @@ export default function Apnea() {
             onClick={() =>
               window.open("https://apnea.vercel.app/", "_blank", "noreferrer")
             }
-            sx={{ textDecoration: "none", m: "2rem 0", color: "primary.main" }}
+            sx={{ textDecoration: "none", m: ".5rem 0", color: "primary.main" }}
           >
             Try it there
           </Button>

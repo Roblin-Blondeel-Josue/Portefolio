@@ -12,6 +12,7 @@ import animation1 from "../../assets/animation1.gif";
 import PartyPlace from "./PartyPlace";
 import Apnea from "./Apneas";
 import KlassBox from "./KlassBox";
+import CharacPocket from "./CharaPocket";
 
 const style = {
   position: "absolute",
@@ -31,6 +32,9 @@ export default function Mywork() {
   const [openModal3, setOpenModal3] = React.useState(false);
   const handleOpenModal3 = () => setOpenModal3(true);
   const handleCloseModal3 = () => setOpenModal3(false);
+  const [openModal4, setOpenModal4] = React.useState(false);
+  const handleOpenModal4 = () => setOpenModal4(true);
+  const handleCloseModal4 = () => setOpenModal4(false);
 
   return (
     <Card sx={{ height: "90vh", boxShadow: 3 }}>
@@ -75,7 +79,11 @@ export default function Mywork() {
         >
           <div
             className="etagere1"
-            style={{ borderBottom: "5px solid #523b27", display: "flex" }}
+            style={{
+              borderBottom: "5px solid #523b27",
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
           >
             <Button sx={{ p: 0 }} onClick={() => handleOpen()}>
               <Card
@@ -112,6 +120,43 @@ export default function Mywork() {
             >
               <Box sx={style}>
                 <PartyPlace />
+              </Box>
+            </Modal>
+            <Button sx={{ p: 0 }} onClick={() => handleOpenModal4()}>
+              <Card
+                sx={{
+                  p: 0,
+                  bgcolor: "#181D31",
+                  borderRadius: "3px",
+                  height: "7rem",
+                  width: "2rem",
+                  paddingBottom: ".5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "white",
+                    p: 0,
+                    writingMode: "vertical-rl",
+                    textOrientation: "mixed",
+                  }}
+                >
+                  C'POCKET
+                </Typography>
+              </Card>
+            </Button>
+            <Modal
+              open={openModal4}
+              onClose={handleCloseModal4}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <CharacPocket />
               </Box>
             </Modal>
           </div>
@@ -161,16 +206,6 @@ export default function Mywork() {
                 <Apnea />
               </Box>
             </Modal>
-          </div>
-          <div
-            className="etagere3"
-            style={{
-              marginTop: "1rem",
-              borderBottom: "5px solid #523b27",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
             <Button sx={{ p: 0 }} onClick={() => handleOpenModal3()}>
               <Card
                 sx={{
